@@ -1,6 +1,6 @@
 "use client";
 
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu"; //é a lib que cuida de acessibilidade e navegação via teclado.
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { FiMoreVertical } from "react-icons/fi";
 
 export function DropdownActions({

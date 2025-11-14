@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Viva Condo",
+  description: "Viva Condo",
 };
 
 export default async function RootLayout({

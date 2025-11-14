@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import { useCallback } from "react";
 import {FaUsers,FaSignOutAlt,FaBuilding} from "react-icons/fa";
 import { createClient } from "@/utils/supabase/client";
 
@@ -15,12 +14,12 @@ export default function Menu() {
     const pathname = usePathname();
 
     function isActive(href: string) {
-        return pathname === href || pathname.startsWith(`${href}/`); //pathname.startsWith garante exemplos usuarios/123
+        return pathname === href || pathname.startsWith(`${href}/`); 
     }
 
     const logout = async () => {
         const supabase = createClient();
-        const { error } = await supabase.auth.signOut(); // Promisse
+        const { error } = await supabase.auth.signOut(); 
         if (!error) window.location.href = "/";
     };
 
