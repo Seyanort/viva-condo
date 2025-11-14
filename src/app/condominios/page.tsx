@@ -75,7 +75,7 @@ export default function ListaCondominios() {
         prev.filter((c) => c.id_condominio !== selectedId)
       );
       console.log("SUCESSO")
-      showToast({ type: "success", message: "Condomínio excluído com sucesso",description: "teste" });
+      showToast({ type: "success", message: "Condomínio excluído com sucesso!",description: " "});
       setDeleteDialogOpen(false);
       setSelectedId(null);
       // setIsEditing(false);
@@ -175,7 +175,7 @@ export default function ListaCondominios() {
             Tem certeza de que deseja excluir o condomínio {" "}
             <strong className="text-gray-800"> {selectedName}</strong>? 
             <br />
-            <span className="text-red-800">Todos os moradores vinculados a este condomínio também serão excluídos.Esta ação não poderá ser desfeita.</span> 
+            <span className="text-red-800">Todos os moradores vinculados a este condomínio também serão excluídos. Esta ação não poderá ser desfeita.</span> 
           </>
         }
         isOpen={deleteDialogOpen}

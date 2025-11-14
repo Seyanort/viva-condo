@@ -5,11 +5,10 @@
   --foreground: #000000; 
 }
 
-input, textarea, select { /* new */
-  background: #ffffff;
+input, textarea, select {
+  background: #f3e8ff;  /* fundo roxo claro */
   color: #000000;
 }
-
 
 @theme inline {
   --color-background: var(--background);
@@ -20,8 +19,8 @@ input, textarea, select { /* new */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff; /* new */
-    --foreground: #000000; /* new */
+    --background: #ffffff;
+    --foreground: #000000;
   }
 }
 
@@ -31,12 +30,33 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Barra de rolagem customizada: fundo branco e thumb roxo */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; /* se precisar para scroll horizontal */
+}
 
+::-webkit-scrollbar-track {
+  background: #ffffff; /* fundo branco */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a855f7; /* roxo tailwind violet-500 */
+  border-radius: 10px;
+  border: 2px solid #ffffff; /* espaço entre thumb e track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9333ea; /* roxo mais escuro no hover */
+}
+
+/* cartão azul existente */
 .card-azul {
-  background-color: #2b7fff;    /* cor de fundo azul */
-  padding: 2rem;  /* espaçamento interno rem é uma unidade de medida atrelada ao font-size = 16px padrão no HTML*/
-  border-radius: 0.6rem; /* arredondar bordas */
-  color: white; /* cor do texto */
-  text-align: center; /* centralizar texto */
-  width: 24rem; 
+  background-color: #2b7fff;
+  padding: 2rem;
+  border-radius: 0.6rem;
+  color: white;
+  text-align: center;
+  width: 24rem;
 }
